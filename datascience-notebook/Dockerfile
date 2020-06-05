@@ -1,7 +1,8 @@
 # Copyright (c) Jupyter Development Team.
 # Distributed under the terms of the Modified BSD License.
-ARG BASE_CONTAINER=jupyter/scipy-notebook
-FROM $BASE_CONTAINER
+#ARG BASE_CONTAINER=jupyter/scipy-notebook
+#FROM $BASE_CONTAINER
+FROM jupyter/scipy-notebook
 
 LABEL maintainer="Jupyter Project <jupyter@googlegroups.com>"
 
@@ -43,30 +44,22 @@ RUN mkdir /etc/julia && \
 
 USER $NB_UID
 
-# R packages including IRKernel which gets installed globally.
-RUN conda install --quiet --yes \
-    'r-base=3.6.3' \
-    'r-caret=6.0*' \
-    'r-crayon=1.3*' \
-    'r-devtools=2.3*' \
-    'r-forecast=8.12*' \
-    'r-hexbin=1.28*' \
-    'r-htmltools=0.4*' \
-    'r-htmlwidgets=1.5*' \
-    'r-irkernel=1.1*' \
-    'r-nycflights13=1.0*' \
-    'r-plyr=1.8*' \
-    'r-randomforest=4.6*' \
-    'r-rcurl=1.98*' \
-    'r-reshape2=1.4*' \
-    'r-rmarkdown=2.1*' \
-    'r-rsqlite=2.2*' \
-    'r-shiny=1.4*' \
-    'r-tidyverse=1.3*' \
-    'rpy2=3.1*' \
+# Copy requirements list for PIP and CONDA
+COPY pip-requirements.lst $pwd
+COPY conda-requirements.lst $pwd
+
+# PIP install packages
+RUN pip install -r pip-requirements.lst
+
+# CONDA install packages
+
+RUN for pks in $(cat conda-requirements.lst);do \
+    conda install --quiet --yes $pks; \
+    done \
     && \
-    conda clean --all -f -y && \
-    fix-permissions $CONDA_DIR && \
+    conda clean --all -f -y 
+
+RUN fix-permissions $CONDA_DIR && \
     fix-permissions /home/$NB_USER
 
 # Add Julia packages. Only add HDF5 if this is not a test-only build since
