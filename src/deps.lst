@@ -1,0 +1,15 @@
+#conda
+pyodbc
+freetds
+
+#pip
+jupyter_plotly_dash
+schedule
+dash
+pyarrow
+unidecode
+dash_bootstrap_components
+plotly
+plotly_express
+openpyxl
+

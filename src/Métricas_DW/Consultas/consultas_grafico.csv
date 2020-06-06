@@ -1,0 +1,131 @@
+,consulta,variable,value,tipo
+0,Consultas - Q afiliados Médica,2019-01-01,7.0,prestador
+1,2 consultas - Q afiliados,2019-01-01,3.0,prestador
+2,3 consultas - Q afiliado,2019-01-01,0.0,prestador
+3,4 consultas - Q afiliados,2019-01-01,0.0,prestador
+4,Más de 4 - Q afiliados,2019-01-01,0.0,prestador
+5,Consultas - Q afiliados Médica,2019-02-01,4.0,prestador
+6,2 consultas - Q afiliados,2019-02-01,0.0,prestador
+7,3 consultas - Q afiliado,2019-02-01,0.0,prestador
+8,4 consultas - Q afiliados,2019-02-01,0.0,prestador
+9,Más de 4 - Q afiliados,2019-02-01,0.0,prestador
+10,Consultas - Q afiliados Médica,2019-03-01,9.0,prestador
+11,2 consultas - Q afiliados,2019-03-01,2.0,prestador
+12,3 consultas - Q afiliado,2019-03-01,0.0,prestador
+13,4 consultas - Q afiliados,2019-03-01,0.0,prestador
+14,Más de 4 - Q afiliados,2019-03-01,0.0,prestador
+15,Consultas - Q afiliados Médica,2019-04-01,8.0,prestador
+16,2 consultas - Q afiliados,2019-04-01,2.0,prestador
+17,3 consultas - Q afiliado,2019-04-01,0.0,prestador
+18,4 consultas - Q afiliados,2019-04-01,0.0,prestador
+19,Más de 4 - Q afiliados,2019-04-01,0.0,prestador
+20,Consultas - Q afiliados Médica,2019-05-01,12.0,prestador
+21,2 consultas - Q afiliados,2019-05-01,0.0,prestador
+22,3 consultas - Q afiliado,2019-05-01,1.0,prestador
+23,4 consultas - Q afiliados,2019-05-01,0.0,prestador
+24,Más de 4 - Q afiliados,2019-05-01,0.0,prestador
+25,Consultas - Q afiliados Médica,2019-06-01,5.0,prestador
+26,2 consultas - Q afiliados,2019-06-01,3.0,prestador
+27,3 consultas - Q afiliado,2019-06-01,2.0,prestador
+28,4 consultas - Q afiliados,2019-06-01,1.0,prestador
+29,Más de 4 - Q afiliados,2019-06-01,0.0,prestador
+30,Consultas - Q afiliados Médica,2019-07-01,6.0,prestador
+31,2 consultas - Q afiliados,2019-07-01,3.0,prestador
+32,3 consultas - Q afiliado,2019-07-01,2.0,prestador
+33,4 consultas - Q afiliados,2019-07-01,0.0,prestador
+34,Más de 4 - Q afiliados,2019-07-01,0.0,prestador
+35,Consultas - Q afiliados Médica,2019-08-01,13.0,prestador
+36,2 consultas - Q afiliados,2019-08-01,4.0,prestador
+37,3 consultas - Q afiliado,2019-08-01,1.0,prestador
+38,4 consultas - Q afiliados,2019-08-01,0.0,prestador
+39,Más de 4 - Q afiliados,2019-08-01,0.0,prestador
+40,Consultas - Q afiliados Médica,2019-09-01,10.0,prestador
+41,2 consultas - Q afiliados,2019-09-01,5.0,prestador
+42,3 consultas - Q afiliado,2019-09-01,1.0,prestador
+43,4 consultas - Q afiliados,2019-09-01,0.0,prestador
+44,Más de 4 - Q afiliados,2019-09-01,0.0,prestador
+45,Consultas - Q afiliados Médica,2019-10-01,15.0,prestador
+46,2 consultas - Q afiliados,2019-10-01,5.0,prestador
+47,3 consultas - Q afiliado,2019-10-01,0.0,prestador
+48,4 consultas - Q afiliados,2019-10-01,0.0,prestador
+49,Más de 4 - Q afiliados,2019-10-01,0.0,prestador
+50,Consultas - Q afiliados Médica,2019-11-01,9.0,prestador
+51,2 consultas - Q afiliados,2019-11-01,3.0,prestador
+52,3 consultas - Q afiliado,2019-11-01,1.0,prestador
+53,4 consultas - Q afiliados,2019-11-01,0.0,prestador
+54,Más de 4 - Q afiliados,2019-11-01,0.0,prestador
+55,Consultas - Q afiliados Médica,2019-12-01,12.0,prestador
+56,2 consultas - Q afiliados,2019-12-01,1.0,prestador
+57,3 consultas - Q afiliado,2019-12-01,0.0,prestador
+58,4 consultas - Q afiliados,2019-12-01,0.0,prestador
+59,Más de 4 - Q afiliados,2019-12-01,0.0,prestador
+60,Consultas - Q afiliados Médica,2020-01-01,0.0,prestador
+61,2 consultas - Q afiliados,2020-01-01,11.0,prestador
+62,3 consultas - Q afiliado,2020-01-01,0.0,prestador
+63,4 consultas - Q afiliados,2020-01-01,3.0,prestador
+64,Más de 4 - Q afiliados,2020-01-01,0.0,prestador
+0,Consultas - Q afiliados Médica,2019-01-01,19.43,Gastroenterología Pediátrica
+1,2 consultas - Q afiliados,2019-01-01,1.64,Gastroenterología Pediátrica
+2,3 consultas - Q afiliado,2019-01-01,0.14,Gastroenterología Pediátrica
+3,4 consultas - Q afiliados,2019-01-01,0.0,Gastroenterología Pediátrica
+4,Más de 4 - Q afiliados,2019-01-01,0.0,Gastroenterología Pediátrica
+5,Consultas - Q afiliados Médica,2019-02-01,24.43,Gastroenterología Pediátrica
+6,2 consultas - Q afiliados,2019-02-01,3.43,Gastroenterología Pediátrica
+7,3 consultas - Q afiliado,2019-02-01,0.93,Gastroenterología Pediátrica
+8,4 consultas - Q afiliados,2019-02-01,0.0,Gastroenterología Pediátrica
+9,Más de 4 - Q afiliados,2019-02-01,0.0,Gastroenterología Pediátrica
+10,Consultas - Q afiliados Médica,2019-03-01,22.31,Gastroenterología Pediátrica
+11,2 consultas - Q afiliados,2019-03-01,4.69,Gastroenterología Pediátrica
+12,3 consultas - Q afiliado,2019-03-01,0.81,Gastroenterología Pediátrica
+13,4 consultas - Q afiliados,2019-03-01,0.06,Gastroenterología Pediátrica
+14,Más de 4 - Q afiliados,2019-03-01,0.0,Gastroenterología Pediátrica
+15,Consultas - Q afiliados Médica,2019-04-01,23.86,Gastroenterología Pediátrica
+16,2 consultas - Q afiliados,2019-04-01,5.5,Gastroenterología Pediátrica
+17,3 consultas - Q afiliado,2019-04-01,0.57,Gastroenterología Pediátrica
+18,4 consultas - Q afiliados,2019-04-01,0.0,Gastroenterología Pediátrica
+19,Más de 4 - Q afiliados,2019-04-01,0.07,Gastroenterología Pediátrica
+20,Consultas - Q afiliados Médica,2019-05-01,23.31,Gastroenterología Pediátrica
+21,2 consultas - Q afiliados,2019-05-01,4.56,Gastroenterología Pediátrica
+22,3 consultas - Q afiliado,2019-05-01,0.69,Gastroenterología Pediátrica
+23,4 consultas - Q afiliados,2019-05-01,0.19,Gastroenterología Pediátrica
+24,Más de 4 - Q afiliados,2019-05-01,0.0,Gastroenterología Pediátrica
+25,Consultas - Q afiliados Médica,2019-06-01,19.5,Gastroenterología Pediátrica
+26,2 consultas - Q afiliados,2019-06-01,4.56,Gastroenterología Pediátrica
+27,3 consultas - Q afiliado,2019-06-01,0.62,Gastroenterología Pediátrica
+28,4 consultas - Q afiliados,2019-06-01,0.12,Gastroenterología Pediátrica
+29,Más de 4 - Q afiliados,2019-06-01,0.0,Gastroenterología Pediátrica
+30,Consultas - Q afiliados Médica,2019-07-01,24.38,Gastroenterología Pediátrica
+31,2 consultas - Q afiliados,2019-07-01,4.88,Gastroenterología Pediátrica
+32,3 consultas - Q afiliado,2019-07-01,1.31,Gastroenterología Pediátrica
+33,4 consultas - Q afiliados,2019-07-01,0.06,Gastroenterología Pediátrica
+34,Más de 4 - Q afiliados,2019-07-01,0.0,Gastroenterología Pediátrica
+35,Consultas - Q afiliados Médica,2019-08-01,26.0,Gastroenterología Pediátrica
+36,2 consultas - Q afiliados,2019-08-01,4.21,Gastroenterología Pediátrica
+37,3 consultas - Q afiliado,2019-08-01,1.0,Gastroenterología Pediátrica
+38,4 consultas - Q afiliados,2019-08-01,0.14,Gastroenterología Pediátrica
+39,Más de 4 - Q afiliados,2019-08-01,0.0,Gastroenterología Pediátrica
+40,Consultas - Q afiliados Médica,2019-09-01,26.64,Gastroenterología Pediátrica
+41,2 consultas - Q afiliados,2019-09-01,3.71,Gastroenterología Pediátrica
+42,3 consultas - Q afiliado,2019-09-01,0.71,Gastroenterología Pediátrica
+43,4 consultas - Q afiliados,2019-09-01,0.07,Gastroenterología Pediátrica
+44,Más de 4 - Q afiliados,2019-09-01,0.0,Gastroenterología Pediátrica
+45,Consultas - Q afiliados Médica,2019-10-01,26.0,Gastroenterología Pediátrica
+46,2 consultas - Q afiliados,2019-10-01,5.13,Gastroenterología Pediátrica
+47,3 consultas - Q afiliado,2019-10-01,0.87,Gastroenterología Pediátrica
+48,4 consultas - Q afiliados,2019-10-01,0.2,Gastroenterología Pediátrica
+49,Más de 4 - Q afiliados,2019-10-01,0.0,Gastroenterología Pediátrica
+50,Consultas - Q afiliados Médica,2019-11-01,23.8,Gastroenterología Pediátrica
+51,2 consultas - Q afiliados,2019-11-01,2.73,Gastroenterología Pediátrica
+52,3 consultas - Q afiliado,2019-11-01,0.47,Gastroenterología Pediátrica
+53,4 consultas - Q afiliados,2019-11-01,0.07,Gastroenterología Pediátrica
+54,Más de 4 - Q afiliados,2019-11-01,0.0,Gastroenterología Pediátrica
+55,Consultas - Q afiliados Médica,2019-12-01,23.93,Gastroenterología Pediátrica
+56,2 consultas - Q afiliados,2019-12-01,3.53,Gastroenterología Pediátrica
+57,3 consultas - Q afiliado,2019-12-01,0.53,Gastroenterología Pediátrica
+58,4 consultas - Q afiliados,2019-12-01,0.13,Gastroenterología Pediátrica
+59,Más de 4 - Q afiliados,2019-12-01,0.0,Gastroenterología Pediátrica
+60,Consultas - Q afiliados Médica,2020-01-01,19.69,Gastroenterología Pediátrica
+61,2 consultas - Q afiliados,2020-01-01,2.54,Gastroenterología Pediátrica
+62,3 consultas - Q afiliado,2020-01-01,0.08,Gastroenterología Pediátrica
+63,4 consultas - Q afiliados,2020-01-01,0.23,Gastroenterología Pediátrica
+64,Más de 4 - Q afiliados,2020-01-01,0.0,Gastroenterología Pediátrica
