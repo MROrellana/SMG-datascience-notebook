@@ -15,6 +15,7 @@ USER root
 # R pre-requisites
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
+    cron \
     fonts-dejavu \
     gfortran \
     gcc && \
