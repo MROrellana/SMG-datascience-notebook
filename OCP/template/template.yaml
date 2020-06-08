@@ -1,0 +1,116 @@
+!!python/unicode 'apiVersion': !!python/unicode 'v1'
+!!python/unicode 'kind': !!python/unicode 'Template'
+!!python/unicode 'metadata':
+  !!python/unicode 'annotations':
+    !!python/unicode 'description': !!python/unicode 'Template for deploying Jupyter
+      Notebook images.'
+    !!python/unicode 'iconClass': !!python/unicode 'icon-python'
+    !!python/unicode 'openshift.io/display-name': !!python/unicode 'profiling-openshift-test-01'
+    !!python/unicode 'tags': !!python/unicode 'python,jupyter,profiling'
+  !!python/unicode 'name': !!python/unicode 'profiling-openshift-test-01'
+!!python/unicode 'objects':
+- !!python/unicode 'apiVersion': !!python/unicode 'v1'
+  !!python/unicode 'data':
+    !!python/unicode 'jupyter_notebook_config.py': !!python/unicode "import os\n\n\
+      password = os.environ.get('JUPYTER_NOTEBOOK_PASSWORD')\n\nif password:\n   \
+      \ import notebook.auth\n    c.NotebookApp.password = notebook.auth.passwd(password)\n\
+      \    del password\n    del os.environ['JUPYTER_NOTEBOOK_PASSWORD']\n\nimage_config_file\
+      \ = '/home/jovyan/.jupyter/jupyter_notebook_config.py'\n\nif os.path.exists(image_config_file):\n\
+      \    with open(image_config_file) as fp:\n        exec(compile(fp.read(), image_config_file,\
+      \ 'exec'), globals())\n"
+  !!python/unicode 'kind': !!python/unicode 'ConfigMap'
+  !!python/unicode 'metadata':
+    !!python/unicode 'labels':
+      !!python/unicode 'app': !!python/unicode '${APPLICATION_NAME}'
+    !!python/unicode 'name': !!python/unicode '${APPLICATION_NAME}-cfg'
+- !!python/unicode 'apiVersion': !!python/unicode 'v1'
+  !!python/unicode 'kind': !!python/unicode 'DeploymentConfig'
+  !!python/unicode 'metadata':
+    !!python/unicode 'labels':
+      !!python/unicode 'app': !!python/unicode '${APPLICATION_NAME}'
+    !!python/unicode 'name': !!python/unicode '${APPLICATION_NAME}'
+  !!python/unicode 'spec':
+    !!python/unicode 'replicas': 1
+    !!python/unicode 'selector':
+      !!python/unicode 'app': !!python/unicode '${APPLICATION_NAME}'
+      !!python/unicode 'deploymentconfig': !!python/unicode '${APPLICATION_NAME}'
+    !!python/unicode 'strategy':
+      !!python/unicode 'type': !!python/unicode 'Recreate'
+    !!python/unicode 'template':
+      !!python/unicode 'metadata':
+        !!python/unicode 'annotations':
+          !!python/unicode 'alpha.image.policy.openshift.io/resolve-names': !!python/unicode '*'
+        !!python/unicode 'labels':
+          !!python/unicode 'app': !!python/unicode '${APPLICATION_NAME}'
+          !!python/unicode 'deploymentconfig': !!python/unicode '${APPLICATION_NAME}'
+      !!python/unicode 'spec':
+        !!python/unicode 'automountServiceAccountToken': false
+        !!python/unicode 'containers':
+        - !!python/unicode 'command':
+          - !!python/unicode 'start-notebook.sh'
+          - !!python/unicode '--config=/etc/jupyter/openshift/jupyter_notebook_config.py'
+          - !!python/unicode '--no-browser'
+          - !!python/unicode '--ip=0.0.0.0'
+          !!python/unicode 'env':
+          - !!python/unicode 'name': !!python/unicode 'JUPYTER_NOTEBOOK_PASSWORD'
+            !!python/unicode 'value': !!python/unicode '${NOTEBOOK_PASSWORD}'
+          !!python/unicode 'image': !!python/unicode '${NOTEBOOK_IMAGE}'
+          !!python/unicode 'name': !!python/unicode 'profiling-openshift-test-01'
+          !!python/unicode 'ports':
+          - !!python/unicode 'containerPort': 8888
+            !!python/unicode 'protocol': !!python/unicode 'TCP'
+          !!python/unicode 'volumeMounts':
+          - !!python/unicode 'mountPath': !!python/unicode '/etc/jupyter/openshift'
+            !!python/unicode 'name': !!python/unicode 'configs'
+        !!python/unicode 'securityContext':
+          !!python/unicode 'supplementalGroups':
+          - 100
+        !!python/unicode 'volumes':
+        - !!python/unicode 'configMap':
+            !!python/unicode 'name': !!python/unicode '${APPLICATION_NAME}-cfg'
+          !!python/unicode 'name': !!python/unicode 'configs'
+    !!python/unicode 'triggers':
+    - !!python/unicode 'type': !!python/unicode 'ConfigChange'
+- !!python/unicode 'apiVersion': !!python/unicode 'v1'
+  !!python/unicode 'kind': !!python/unicode 'Route'
+  !!python/unicode 'metadata':
+    !!python/unicode 'labels':
+      !!python/unicode 'app': !!python/unicode '${APPLICATION_NAME}'
+    !!python/unicode 'name': !!python/unicode '${APPLICATION_NAME}'
+  !!python/unicode 'spec':
+    !!python/unicode 'host': !!python/unicode ''
+    !!python/unicode 'port':
+      !!python/unicode 'targetPort': !!python/unicode '8888-tcp'
+    !!python/unicode 'tls':
+      !!python/unicode 'insecureEdgeTerminationPolicy': !!python/unicode 'Redirect'
+      !!python/unicode 'termination': !!python/unicode 'edge'
+    !!python/unicode 'to':
+      !!python/unicode 'kind': !!python/unicode 'Service'
+      !!python/unicode 'name': !!python/unicode '${APPLICATION_NAME}'
+      !!python/unicode 'weight': 100
+- !!python/unicode 'apiVersion': !!python/unicode 'v1'
+  !!python/unicode 'kind': !!python/unicode 'Service'
+  !!python/unicode 'metadata':
+    !!python/unicode 'labels':
+      !!python/unicode 'app': !!python/unicode '${APPLICATION_NAME}'
+    !!python/unicode 'name': !!python/unicode '${APPLICATION_NAME}'
+  !!python/unicode 'spec':
+    !!python/unicode 'ports':
+    - !!python/unicode 'name': !!python/unicode '8888-tcp'
+      !!python/unicode 'port': 8888
+      !!python/unicode 'protocol': !!python/unicode 'TCP'
+      !!python/unicode 'targetPort': 8888
+    !!python/unicode 'selector':
+      !!python/unicode 'app': !!python/unicode '${APPLICATION_NAME}'
+      !!python/unicode 'deploymentconfig': !!python/unicode '${APPLICATION_NAME}'
+    !!python/unicode 'type': !!python/unicode 'ClusterIP'
+!!python/unicode 'parameters':
+- !!python/unicode 'name': !!python/unicode 'APPLICATION_NAME'
+  !!python/unicode 'required': true
+  !!python/unicode 'value': !!python/unicode 'profiling-openshift-test-01'
+- !!python/unicode 'name': !!python/unicode 'NOTEBOOK_IMAGE'
+  !!python/unicode 'required': true
+  !!python/unicode 'value': !!python/unicode 'imagestream.image.openshift.io/smg-datascience-notebook-base'
+- !!python/unicode 'from': !!python/unicode 'smg-corebi'
+  !!python/unicode 'generate': !!python/unicode 'expression'
+  !!python/unicode 'name': !!python/unicode 'NOTEBOOK_PASSWORD'

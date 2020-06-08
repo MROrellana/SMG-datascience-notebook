@@ -53,7 +53,6 @@ COPY conda-requirements.lst $pwd
 RUN pip install -r pip-requirements.lst
 
 # CONDA install packages
-
 RUN for pks in $(cat conda-requirements.lst);do \
     conda install --quiet --yes $pks; \
     done \

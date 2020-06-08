@@ -18,7 +18,7 @@
 	},
 	{
 	    "name": "NOTEBOOK_IMAGE",
-	    "value": "imagestream.image.openshift.io/smg-datascience-notebook-git",
+	    "value": "imagestream.image.openshift.io/smg-datascience-notebook-base",
 	    "required": true
 	},
 	{

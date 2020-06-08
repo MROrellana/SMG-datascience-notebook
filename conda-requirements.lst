@@ -16,6 +16,5 @@ r-rmarkdown=2.1*
 r-rsqlite=2.2*
 r-shiny=1.4*
 r-tidyverse=1.3*
-freetds=1.1.15
 pyodbc=4.0.30
-
+freetds=1.1.15
