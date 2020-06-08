@@ -1,0 +1,78 @@
+kind: DeploymentConfig
+apiVersion: apps.openshift.io/v1
+metadata:
+  annotations:
+  name: smg-datascience-notebook
+  namespace: profiling-openshift-test-02
+  labels:
+    app: smg-datascience-notebook
+spec:
+  strategy:
+    type: Recreate
+    recreateParams:
+      timeoutSeconds: 600
+    resources: {}
+    activeDeadlineSeconds: 21600
+  triggers:
+    - type: ConfigChange
+  replicas: 1
+  revisionHistoryLimit: 10
+  test: false
+  selector:
+    app: smg-datascience-notebook
+    deploymentconfig: smg-datascience-notebook
+  template:
+    metadata:
+      labels:
+        app: smg-datascience-notebook
+        deploymentconfig: smg-datascience-notebook
+    spec:
+      volumes:
+        - name: smg-datascience-notebook-cfg
+          configMap:
+            name: smg-datascience-notebook-cfg
+            defaultMode: 420
+        - name: pv-smg-datascience-notebook
+          persistentVolumeClaim:
+            claimName: pv-smg-datascience-notebook
+      containers:
+        - resources: {}
+          terminationMessagePath: /dev/termination-log
+          name: jupyter-notebook
+          command:
+            - start-notebook.sh
+            - '--config=/etc/jupyter/openshift/jupyter_notebook_config.py'
+            - '--no-browser'
+            - '--ip=0.0.0.0'
+          env:
+            - name: JUPYTER_NOTEBOOK_PASSWORD
+              value: smg-corebi
+            - name: JUPYTER_ENABLE_LAB
+              value: 'true'
+          ports:
+            - containerPort: 8888
+              protocol: TCP
+            - containerPort: 8050
+              protocol: TCP
+            - containerPort: 1820
+              protocol: TCP
+            - containerPort: 2638
+              protocol: TCP
+            - containerPort: 4100
+              protocol: TCP
+          imagePullPolicy: Always
+#          volumeMounts:
+#            - name: smg-datascience-notebook-cfg
+#              mountPath: /etc/jupyter/openshift
+#            - name: smg-datascience-notebook-data
+#              mountPath: /home/jovyan
+          terminationMessagePolicy: File
+          image: 'smg-datascience-notebook-base:latest'
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
+      dnsPolicy: ClusterFirst
+      automountServiceAccountToken: false
+      securityContext:
+        supplementalGroups:
+          - 100
+      schedulerName: default-scheduler

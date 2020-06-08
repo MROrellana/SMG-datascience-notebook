@@ -1,0 +1,90 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: 2020-06-08T15:28:23Z
+    creationTimestamp: 2020-04-07T12:49:51Z
+    labels:
+      app: notebook-dashboard
+    name: notebook-dashboard
+    namespace: profiling-develop
+    resourceVersion: "194152455"
+    selfLink: /api/v1/namespaces/profiling-develop/endpoints/notebook-dashboard
+    uid: 45709ce0-78ce-11ea-9e60-005056ae0efa
+  subsets:
+  - addresses:
+    - ip: 10.199.9.227
+      nodeName: atslvinfra2t.ocp-rc1.swm.com.ar
+      targetRef:
+        kind: Pod
+        name: notebook-1-q4kqm
+        namespace: profiling-develop
+        resourceVersion: "194152452"
+        uid: 26c70511-6411-4892-88b3-1e4a5caae00e
+    ports:
+    - name: 8050-tcp
+      port: 8050
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: 2020-06-08T15:28:23Z
+    creationTimestamp: 2020-04-07T12:49:51Z
+    labels:
+      app: notebook-jupyter
+    name: notebook-jupyter
+    namespace: profiling-develop
+    resourceVersion: "194152453"
+    selfLink: /api/v1/namespaces/profiling-develop/endpoints/notebook-jupyter
+    uid: 456ce7e7-78ce-11ea-9e60-005056ae0efa
+  subsets:
+  - addresses:
+    - ip: 10.199.9.227
+      nodeName: atslvinfra2t.ocp-rc1.swm.com.ar
+      targetRef:
+        kind: Pod
+        name: notebook-1-q4kqm
+        namespace: profiling-develop
+        resourceVersion: "194152452"
+        uid: 26c70511-6411-4892-88b3-1e4a5caae00e
+    ports:
+    - name: 8888-tcp
+      port: 8888
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: 2020-06-08T15:26:37Z
+    labels:
+      app: smg-datascience-notebook-base
+      app.kubernetes.io/component: smg-datascience-notebook-base
+      app.kubernetes.io/instance: smg-datascience-notebook-base
+      app.kubernetes.io/name: ""
+      app.kubernetes.io/part-of: smg-datascience-notebook-base-app
+      app.openshift.io/runtime: ""
+    name: smg-datascience-notebook-base
+    namespace: profiling-develop
+    resourceVersion: "194151733"
+    selfLink: /api/v1/namespaces/profiling-develop/endpoints/smg-datascience-notebook-base
+    uid: 4bb97c73-42e3-40e0-9a4d-6912a5205b01
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: 2020-06-08T15:29:18Z
+    labels:
+      app: smg-datascience-notebook-git
+      app.kubernetes.io/component: smg-datascience-notebook-git
+      app.kubernetes.io/instance: smg-datascience-notebook-git
+      app.kubernetes.io/part-of: smg-datascience-notebook-git-app
+    name: smg-datascience-notebook-git
+    namespace: profiling-develop
+    resourceVersion: "194181400"
+    selfLink: /api/v1/namespaces/profiling-develop/endpoints/smg-datascience-notebook-git
+    uid: a9d6a02e-81c0-4e89-abea-d7c0a8bb918e
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""

@@ -1,0 +1,37 @@
+apiVersion: v1
+items:
+- apiVersion: image.openshift.io/v1
+  generation: 1
+  image:
+    dockerImageLayers: null
+    dockerImageMetadata:
+      ContainerConfig: {}
+      Created: null
+      Id: ""
+      apiVersion: "1.0"
+      kind: DockerImage
+    dockerImageMetadataVersion: "1.0"
+    dockerImageReference: image-registry.openshift-image-registry.svc:5000/profiling-develop/smg-datascience-notebook-git@sha256:f306e1e6e493e77cad34749675cb398246a23ad11af3632c32b564c0a35ae6c8
+    metadata:
+      creationTimestamp: null
+      name: sha256:f306e1e6e493e77cad34749675cb398246a23ad11af3632c32b564c0a35ae6c8
+  kind: ImageStreamTag
+  lookupPolicy:
+    local: false
+  metadata:
+    creationTimestamp: 2020-06-08T15:58:17Z
+    labels:
+      app: smg-datascience-notebook-git
+      app.kubernetes.io/component: smg-datascience-notebook-git
+      app.kubernetes.io/instance: smg-datascience-notebook-git
+      app.kubernetes.io/part-of: smg-datascience-notebook-git-app
+    name: smg-datascience-notebook-git:latest
+    namespace: profiling-develop
+    resourceVersion: "194174805"
+    selfLink: /apis/image.openshift.io/v1/namespaces/profiling-develop/imagestreamtags/smg-datascience-notebook-git:latest
+    uid: c90d6f87-dcd5-4e25-b8ae-48397dc0e51b
+  tag: null
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""
