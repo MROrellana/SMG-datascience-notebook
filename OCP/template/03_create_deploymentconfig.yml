@@ -64,8 +64,8 @@ spec:
 #          volumeMounts:
 #            - name: smg-datascience-notebook-cfg
 #              mountPath: /etc/jupyter/openshift
-#            - name: smg-datascience-notebook-data
-#              mountPath: /home/jovyan
+            - name: pv-smg-datascience-notebook
+              mountPath: /home/jovyan
           terminationMessagePolicy: File
           image: 'smg-datascience-notebook-base:latest'
       restartPolicy: Always

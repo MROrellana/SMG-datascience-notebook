@@ -18,7 +18,8 @@ RUN apt-get update && \
     cron \
     fonts-dejavu \
     gfortran \
-    gcc && \
+    gcc  \
+    cron && \
     rm -rf /var/lib/apt/lists/*
 
 # Julia dependencies
